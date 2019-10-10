@@ -33,7 +33,8 @@ namespace WinMTR.NET
         {
             foreach (string s in MtrSettings.Instance.SettingsObject.SavedHosts)
             {
-                addressComboBox.Items.Add(s);
+                if (s != null)
+                    addressComboBox.Items.Add(s);
             }
         }
 
